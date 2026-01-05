@@ -20,6 +20,7 @@ html_template = """<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN
 <body>
 <div class="container">
     <h1>Begitdj Archive</h1>
+    <p>If site doesn't open on old website try proxy: <a href="https://nnp.nnchan.ru/glype/browse.php?u=https%3A%2F%2Fbegitdj.github.io%2F&b=14">Glype Proxy</a></p>
     <ul>
 {links}
     </ul>
@@ -28,6 +29,8 @@ html_template = """<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN
 </html>"""
 
 links = []
+proxy_base = "https://nnp.nnchan.ru/glype/browse.php?u=https%3A%2F%2Fbegitdj.github.io%2F"
+
 for root, dirs, files in os.walk('.'):
     dirs[:] = [d for d in dirs if d not in EXCLUDE]
     for file in files:
@@ -35,7 +38,11 @@ for root, dirs, files in os.walk('.'):
             continue
         rel_path = os.path.relpath(os.path.join(root, file), '.')
         web_path = rel_path.replace('\\', '/')
-        links.append('        <li><a href="' + web_path + '">' + web_path + '</a></li>')
+        
+        # Генерируем ссылку через прокси для каждого файла
+        proxy_link = proxy_base + web_path.replace('/', '%2F') + "&b=14"
+        
+        links.append('        <li><a href="' + proxy_link + '">' + web_path + '</a></li>')
 
 with open('index.html', 'w', encoding='utf-8') as f:
     f.write(html_template.format(links='\n'.join(sorted(links))))
