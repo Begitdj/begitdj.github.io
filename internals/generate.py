@@ -8,13 +8,13 @@ html_template = """<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Begitdj Archive</title>
 <style type="text/css">
-    body { font-family: sans-serif; background-color: #f0f0f0; margin: 0; padding: 20px; color: #333; }
-    .container { background-color: #ffffff; border: 1px solid #ccc; max-width: 800px; margin: 0 auto; padding: 20px; }
-    h1 { border-bottom: 2px solid #0055aa; color: #0055aa; padding-bottom: 10px; margin-top: 0; }
-    ul { list-style-type: none; padding: 0; }
-    li { padding: 8px; border-bottom: 1px solid #eee; }
-    li a { color: #0066cc; text-decoration: none; font-weight: bold; }
-    li a:hover { text-decoration: underline; color: #ff6600; }
+    body {{ font-family: sans-serif; background-color: #f0f0f0; margin: 0; padding: 20px; color: #333; }}
+    .container {{ background-color: #ffffff; border: 1px solid #ccc; max-width: 800px; margin: 0 auto; padding: 20px; }}
+    h1 {{ border-bottom: 2px solid #0055aa; color: #0055aa; padding-bottom: 10px; margin-top: 0; }}
+    ul {{ list-style-type: none; padding: 0; }}
+    li {{ padding: 8px; border-bottom: 1px solid #eee; }}
+    li a {{ color: #0066cc; text-decoration: none; font-weight: bold; }}
+    li a:hover {{ text-decoration: underline; color: #ff6600; }}
 </style>
 </head>
 <body>
