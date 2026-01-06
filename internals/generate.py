@@ -39,7 +39,7 @@ for root, dirs, files in os.walk('.'):
         rel_path = os.path.relpath(os.path.join(root, file), '.')
         web_path = rel_path.replace('\\', '/')
         
-        # Генерируем ссылку через прокси для каждого файла
+        
         proxy_link = proxy_base + web_path.replace('/', '%2F') + "&b=14"
         
         links.append('        <li><a href="' + proxy_link + '">' + web_path + '</a></li>')
