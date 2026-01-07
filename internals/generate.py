@@ -21,6 +21,8 @@ html_template = """<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN
 <div class="container">
     <h1>Begitdj Archive</h1>
     <p>If site doesn't open on old browser try proxy: <a href="https://nnp.nnchan.ru/glype/browse.php?u=https%3A%2F%2Fbegitdj.github.io%2F&b=14">Glype Proxy</a></p>
+    <p>Try mirror: <a href="http://begitdj.w10.site/">Mirror</a></p>
+    <p>Main: <a href="https://begitdj.github.io/">Main</a></p>
     <ul>
 {links}
     </ul>
