@@ -1,0 +1,15 @@
+! 1. Click block
+||adnet.zorgv.su/click.php^
+
+! 2. Redirect
+||adnet.zorgv.su/lw.php?site=
+
+! 2.1. Break website list at adnet.zorgv.su, block redirect
+||adnet.zorgv.su/lw.php^
+
+! 3. Cosmetic
+##a[href^="http://adnet.zorgv.su"] > table[bordercolor="#000000"]
+##table:has(font:has-text(AdNet)):has-text(Hits:)
+
+! 4. Full block adnet (Caution)
+||adnet.zorgv.su^
